@@ -1,7 +1,4 @@
-var originalFlavors = ["Banana Nut Fudge",
-    "Black Walnut",
-    "Burgundy Cherry",
-   "Butterscotch Ribbon",
+var originalFlavors = ["Banana Nut Fudge", "Black Walnut", "Burgundy Cherry", "Butterscotch Ribbon",
     "Cherry Macaron",
     "Chocolate",
     "Chocolate Almond",
@@ -47,7 +44,7 @@ function is31Flavors(arr){
     return false;
     }
     }
-    console.log(is31Flavors());
+    console.log(is31Flavors(originalFlavors));
     
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -65,7 +62,7 @@ function addFlavor(arr, flav){
     arr.unshift(flav);
     console.log(arr);
     }
-    addFlavor(origionalFlavors, 'Rainbow Sherbert');
+    addFlavor(originalFlavors, 'Rainbow Sherbert');
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -77,11 +74,11 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(/*code here*/){
-
-    /*code here*/
-
-}
+function removeLastFlavor(arr){
+    arr.pop();
+    console.log(arr); 
+        }
+    removeLastFlavor(originalFlavors);
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -90,22 +87,26 @@ Your function should accept:
 (1) an array 
 (2) an index
 
-For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
+For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", 
+assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
-
-    /*code here*/
-
+function getFlavorByIndex(arr, index){
+    arr[index];
+    console.log(arr[index]);
 }
+getFlavorByIndex(originalFlavors, 2);
 
-/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
+/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they 
+need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. 
+Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
 
 (1) an array
 (2) a string (flavor)
 
-For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla. 
+For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 
+including all of the flavors except Vanilla. 
 
 Hint: You can use .splice() for this
 
