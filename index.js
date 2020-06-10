@@ -177,7 +177,9 @@ function filterByWord(arr, string, newarr){
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+/* STRETCH 1: Write a function that returns the average number of words 
+in an array. You should be able to use this function for any array, but 
+can test with originalFlavors.
 
 Your function should accept: 
 
@@ -187,20 +189,23 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
-
-    /*code here*/
-
+function getAverageWordLength(arr){
+    return arr.length;
 }
 
+console.log(getAverageWordLength(originalFlavors))
 
-/* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
+/* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, 
+and even regional flavors. Write a function that will randomly select 
+a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors,
+ and regionalFlavors.
 
 Your function should accept 4 different arrays,
 
 and should return a new array called randomFlavors with a length 31.
 
-forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].*/
+forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return 
+["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].*/
 
 // Data ⬇️
 var newFlavors = ["Date night",
@@ -275,8 +280,13 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
-
-    /*code here*/
-
+function getRandomFlavors(arr, arr1, arr2, arr3){
+    const shuffle = Math.floor(Math.random() * 8 + 1);
+   randomizeFlavors = arr[shuffle];
+    return randomizeFlavors;
 }
+console.log(getRandomFlavors(newFlavors));
+console.log(getRandomFlavors(seasonalFlavors));
+console.log(getRandomFlavors(regionalFlavors));
+console.log(getRandomFlavors(originalFlavors));
+
